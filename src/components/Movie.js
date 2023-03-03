@@ -29,20 +29,20 @@ useEffect (()=> {
 								<table className="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 									<thead>
 										<tr>
-                                            <th>Id</th>
-                                            <th>Usuario</th>
+                                            <th>Usuario_Id</th>
                                             <th>Seguro</th>
-                                            <th>Fecha Contratacion</th>
-                                            <th>Email</th>
+                                            <th>Fecha de Contratacion</th>
+                                            <th>Fecha de Vencimiento</th>
+                                            
 										</tr>
 									</thead>
 									<tfoot>
 										<tr>
-                                            <th>Id</th>
-                                            <th>Usuario</th>
+                                            <th>Usuario_ Id</th>
                                             <th>Seguro</th>
-                                            <th>Fecha Contratacion</th>
-                                            <th>Email</th>
+                                            <th>Fecha de Contratacion</th>
+                                            <th>Fecha de Vencimiento</th>
+                                            
 										</tr>
 									</tfoot>
 									<tbody>
@@ -51,9 +51,9 @@ useEffect (()=> {
 											seguros.map((seguro,i) => {
 												return (
 													<tr>
-													<td key = {i}> {1+i++} </td>
+													
 													<td> {seguro.usuario_id} </td>
-													<td>{seguro.seguro_id}</td>
+													<td>{seguro.seguros.nombre}</td>
 													<td> {seguro.fecha_contratacion} </td>
 													<td> {seguro.fecha_vencimiento} </td>
 												</tr>
