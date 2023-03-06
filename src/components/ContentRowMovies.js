@@ -1,5 +1,6 @@
 import React from 'react';
-import SmallCard from './SmallCard';
+
+import SmallCard from './Resumen';
 
 function ContentRowTop(){
     return (
@@ -7,8 +8,10 @@ function ContentRowTop(){
         {/*<!-- Content Row -->*/}
         <div className="row">
             {
+                
              <SmallCard />
-            }      
+            }     
+
         </div>
         </React.Fragment>
     )

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 
-function SmallCard(){
+function Resumen(){
 
 const [cantidad1, setCantidad1] = useState ([])
 
@@ -82,4 +82,4 @@ const [cantidad3, setCantidad3] = useState ([])
         </React.Fragment>
     )
 }
-export default SmallCard
+export default Resumen

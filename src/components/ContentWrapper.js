@@ -1,8 +1,10 @@
 import React from 'react';
 import TopBar from './TopBar';
 import ContentRowTop from './ContentRowTop';
-import Movie from './Movie';
 import Footer from './Footer';
+import "../assets/css/misestilos.css"
+import Listados from './Listados';
+
 function ContentWrapper(){
     return (
         <React.Fragment>
@@ -12,7 +14,7 @@ function ContentWrapper(){
                 <div id="content">
                     <TopBar />
                     <ContentRowTop />
-                    <Movie />
+                    <Listados />
                     <Footer />
                 </div>
             </div>    

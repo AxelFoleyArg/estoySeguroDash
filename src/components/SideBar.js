@@ -1,5 +1,6 @@
 import React from 'react';
 import image from '../assets/images/logo-DH.png';
+import { Link } from 'react-router-dom';
 
 function SideBar(){
     return(
@@ -32,24 +33,26 @@ function SideBar(){
 
                 {/*<!-- Nav Item - Pages -->*/}
                 <li className="nav-item">
-                    <a className="nav-link collapsed" href="/">
+                <Link className="nav-link" to="/listadoproductos">
                         <i className="fas fa-fw fa-folder"></i>
-                        <span>Pages</span>
-                    </a>
+                        <span>Listado de Productos</span>
+                    </Link>
                 </li>
 
                 {/*<!-- Nav Item - Charts -->*/}
                 <li className="nav-item">
-                    <a className="nav-link" href="/">
-                        <i className="fas fa-fw fa-chart-area"></i>
-                        <span>Charts</span></a>
+                <Link className="nav-link" to="/listadocontrataciones">
+                        <i className="fas fa-fw fa-folder"></i>
+                        <span>Listado de Contrataciones</span>
+                    </Link>
                 </li>
 
                 {/*<!-- Nav Item - Tables -->*/}
                 <li className="nav-item">
-                    <a className="nav-link" href="/">
-                        <i className="fas fa-fw fa-table"></i>
-                        <span>Tables</span></a>
+                <Link className="nav-link" to="/listadosiniestros">
+                        <i className="fas fa-fw fa-folder"></i>
+                        <span>Listado de Siniestros</span>
+                    </Link>
                 </li>
 
                 {/*<!-- Divider -->*/}

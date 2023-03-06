@@ -1,28 +1,27 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 
-function Genre(){
+function Categorias(){
 
-    const [seguros, setSeguros] = useState([]);
+    const [categorias, setCategorias] = useState([]);
 
     useEffect (()=> {
         fetch("http://localhost:3001/apip/alltipes")
         .then(response => response.json())
         .then (data => {
-            setSeguros(data.data)
+            setCategorias(data.data)
         })
     }, [])
 
     return(
         <React.Fragment>
-            { seguros.length === 0 && <p>Cargando</p> }
                 {
-                    seguros.map ((tipo, i) =>{
+                    categorias.map ((seguro, i) =>{
                         return (
-                            <div className="col-lg-6 mb-4">
-                            <div className="card text-white bg-dark  shadow">
+                        <div className="col-lg-6 mb-4">
+                            <div className="card text-white bg-dark shadow">
                                 <div className="card-body">
-                                    {tipo.nombre}
+                                   <p> {seguro.nombre} ({seguro.cantidad}) </p>
                                 </div>
                             </div>
                         </div>
@@ -32,5 +31,5 @@ function Genre(){
         </React.Fragment>
     )
 }
-export default Genre;
+export default Categorias;
 

@@ -2,12 +2,12 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 
 
-function Movie(){
+function ListadoProductos(){
 
 const [seguros, setSeguros] = useState ([]);
 
 useEffect (()=> {
-	fetch ("http://localhost:3001/apiup/listall")
+	fetch ("http://localhost:3001/apip/listall")
 	.then (response => response.json())
 	.then(data => {
 		setSeguros(data.data)
@@ -15,12 +15,10 @@ useEffect (()=> {
 }
 , [])
 
-
-
     return(
         <React.Fragment>
 				    {/*<!-- PRODUCTS LIST -->*/}
-					<h1 className="h3 mb-2 text-gray-800">Ultimas contrataciones</h1>
+					<h1 className="h3 mb-2 text-gray-800">Listado de Productos</h1>
 					
 					{/*<!-- DataTales Example -->*/}
 					<div className="card shadow mb-4">
@@ -29,19 +27,21 @@ useEffect (()=> {
 								<table className="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 									<thead>
 										<tr>
-                                            <th>Usuario_Id</th>
+                                            <th>Id</th>
                                             <th>Seguro</th>
-                                            <th>Fecha de Contratacion</th>
-                                            <th>Fecha de Vencimiento</th>
+                                            <th>Descripcion</th>
+                                            <th>Categoria</th>
+                                            <th>Precio</th>
                                             
 										</tr>
 									</thead>
 									<tfoot>
 										<tr>
+                                            <th>Id</th>
                                             <th>Usuario_ Id</th>
                                             <th>Seguro</th>
-                                            <th>Fecha de Contratacion</th>
-                                            <th>Fecha de Vencimiento</th>
+                                            <th>Categoria</th>
+                                            <th>Precio</th>
                                             
 										</tr>
 									</tfoot>
@@ -51,11 +51,11 @@ useEffect (()=> {
 											seguros.map((seguro,i) => {
 												return (
 													<tr>
-													
-													<td> {seguro.usuario_id} </td>
-													<td>{seguro.seguros.nombre}</td>
-													<td> {seguro.fecha_contratacion} </td>
-													<td> {seguro.fecha_vencimiento} </td>
+													<td> {seguro.id} </td>
+													<td> {seguro.nombre} </td>
+													<td> {seguro.descripcion}</td>
+													<td> {seguro.categoria_id} </td>
+													<td> {seguro.precio} </td>
 												</tr>
 												)
 											})
@@ -69,4 +69,4 @@ useEffect (()=> {
         </React.Fragment>
     )
 }
-export default Movie;
+export default ListadoProductos;

@@ -1,10 +1,9 @@
 import React from "react";
-import imagenFondo from '../assets/images/mandalorian.jpg';
 import { useEffect, useState } from "react";
 
 
 
-function LastMovie (){
+function  SeguroVendido (){
 
     const [seguro, setSeguros] = useState ([]);
 
@@ -26,9 +25,6 @@ function LastMovie (){
             <p> {seguro.nombre} </p>
 		</div>
 		<div className="card-body">
-		    <div className="text-center">
-			    <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src={imagenFondo} alt=" Star Wars - Mandalorian "/>
-		    </div>
 			    <p>{seguro.descripcion} </p>
 			    <a className="btn btn-danger" target="_blank" rel="nofollow" href="/">Ver Detalle</a>
 		</div>
@@ -38,5 +34,5 @@ function LastMovie (){
     )
 }
 
-export default LastMovie;
+export default SeguroVendido;
 
