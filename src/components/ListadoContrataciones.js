@@ -53,7 +53,7 @@ useEffect (()=> {
 													<tr>
 													
 													<td> {seguro.usuario_id} </td>
-													<td> {seguro.seguros.nombre}</td>
+													<td> {seguro.seguro.nombre}</td>
 													<td> {seguro.fecha_contratacion} </td>
 													<td> {seguro.fecha_vencimiento} </td>
 												</tr>

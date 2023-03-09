@@ -26,7 +26,6 @@ function UltimoProducto (){
 		</div>
 		<div className="card-body">
 			    <p> {seguro.descripcion} </p>
-			    <a className="btn btn-danger" target="_blank" rel="nofollow" href="/">Ver Detalle</a>
 		</div>
 	</div>
 </div>
